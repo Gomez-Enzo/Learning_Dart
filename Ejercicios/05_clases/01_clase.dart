@@ -1,24 +1,13 @@
+import 'clases/persona.dart';
+
 void main() {
   final persona = Persona();
 
-  persona.nombre = 'Enzo';
-  persona.edad = 20;
-  persona.bio = 'Argentina';
+  persona
+    ..nombre = 'Enzo'
+    ..edad = 20;
 
-  print(persona);
-}
+  persona.bio = 'Cambie el valor';
 
-class Persona {
-  //campos o propiedades
-  String? nombre;
-  int? edad;
-  String? bio;
-
-  //get y sets
-
-  //constructores
-
-  //metodos
-  @override
-  String toString() => '$nombre $edad $bio';
+  print(persona.bio);
 }
