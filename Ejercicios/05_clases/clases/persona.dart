@@ -2,7 +2,7 @@ class Persona {
   //campos o propiedades
   String? nombre;
   int? edad;
-  String _bio = 'Hola, soy una propiedad privada';
+  String _bio = 'Hola, soy propieda privada';
 
   //get y sets
   String get bio {
@@ -14,6 +14,12 @@ class Persona {
   }
 
   //constructores
+  Persona({required this.edad, this.nombre = 'Name'});
+
+  Persona.persona30(this.nombre) {
+    //sobrecarga de constructores
+    this.edad = 30;
+  }
 
   //metodos
   @override
