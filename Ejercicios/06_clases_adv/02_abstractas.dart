@@ -1,4 +1,5 @@
-class Vehiculo {
+abstract class Vehiculo {
+  //solo puede ser clase base
   bool encendido = false;
   void encender() {
     encendido = true;
@@ -9,11 +10,18 @@ class Vehiculo {
     encendido = false;
     print('Vehiculo apagado');
   }
+
+  bool revisarMotor();
 }
 
 class Carro extends Vehiculo {
-  //para heredar
   int kilometraje = 0;
+
+  @override
+  bool revisarMotor() {
+    print('Motor OK!');
+    return true;
+  }
 }
 
 void main() {
@@ -21,4 +29,5 @@ void main() {
 
   ford.encender();
   ford.apagar();
+  ford.revisarMotor();
 }
